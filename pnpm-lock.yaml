@@ -29,9 +29,15 @@ importers:
       '@radix-ui/react-toggle':
         specifier: ^1.1.2
         version: 1.1.2(@types/react-dom@18.3.6(@types/react@18.3.20))(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@rive-app/canvas-advanced':
+        specifier: ^2.34.3
+        version: 2.34.3
       '@rive-app/react-canvas':
         specifier: ^4.26.1
         version: 4.26.1(react@18.3.1)
+      '@rive-app/react-webgl2':
+        specifier: ^4.26.2
+        version: 4.26.2(react@18.3.1)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -1395,6 +1401,9 @@ packages:
   '@radix-ui/rect@1.1.0':
     resolution: {integrity: sha512-A9+lCBZoaMJlVKcRBz2YByCG+Cp2t6nAnMnNba+XiWxnj6r4JUFqfsgwocMBZU9LPtdxC6wB56ySYpc7LQIoJg==}
 
+  '@rive-app/canvas-advanced@2.34.3':
+    resolution: {integrity: sha512-LiMBySaWTcRlMhkwujeiKLe3Yg2YYbjqkqHEgWnHoIY1l4hYGCCDf3TCrZ+mpbrCXncdYiS1dhR/x76j0pE+jA==}
+
   '@rive-app/canvas@2.34.1':
     resolution: {integrity: sha512-mYtyVRY0yRT6nmb4EFm4a5KxqOYZviDkn+3O1CHAEvQBUu0cDf3UtKiReOkl5dHoQ8kF284NzTCXTqPBfmLxWQ==}
 
@@ -1402,6 +1411,14 @@ packages:
     resolution: {integrity: sha512-bR/aqcCgMuRLzcg+pCp3tBetjFbKTB9teo4MBnDn/SlL6ucwgRWItMcvWn8jZI5IbCQzdHRp7FHMoogazDY6Ew==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0
+
+  '@rive-app/react-webgl2@4.26.2':
+    resolution: {integrity: sha512-AwJ7wzx6jzfTD2rrQ8Tt5u5W7b9B4ctnQQnHfIs4ldUM5DV3tE11d81sHOeYNrW9GishgOvU9jsMdHsSnozNzg==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0
+
+  '@rive-app/webgl2@2.34.2':
+    resolution: {integrity: sha512-o6KKQpnCldWMqo8yTD5ClZUKN8hx/26CuZPAcMTCKgP07fDa73KtbW1O0yj0R3o8tekevYNmjHTIicf/cDu+4A==}
 
   '@rollup/rollup-android-arm-eabi@4.39.0':
     resolution: {integrity: sha512-lGVys55Qb00Wvh8DMAocp5kIcaNzEFTmGhfFd88LfaogYTRKrdxgtlO5H6S49v2Nd8R2C6wLOal0qv6/kCkOwA==}
@@ -4278,12 +4295,21 @@ snapshots:
 
   '@radix-ui/rect@1.1.0': {}
 
+  '@rive-app/canvas-advanced@2.34.3': {}
+
   '@rive-app/canvas@2.34.1': {}
 
   '@rive-app/react-canvas@4.26.1(react@18.3.1)':
     dependencies:
       '@rive-app/canvas': 2.34.1
       react: 18.3.1
+
+  '@rive-app/react-webgl2@4.26.2(react@18.3.1)':
+    dependencies:
+      '@rive-app/webgl2': 2.34.2
+      react: 18.3.1
+
+  '@rive-app/webgl2@2.34.2': {}
 
   '@rollup/rollup-android-arm-eabi@4.39.0':
     optional: true

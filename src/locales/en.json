@@ -1,4 +1,78 @@
 {
+  "home": {
+    "hero": {
+      "title": "wuzu",
+      "tagline": "Your diary companion who listens",
+      "philosophy1": "Journaling shouldn't be a solo journey.",
+      "philosophy2": "Facing a blank page, we often stop after one sentence—",
+      "philosophy3": "not because we have nothing to say, but because talking to ourselves is lonely."
+    },
+    "companion": {
+      "title": "WUZU is your diary companion",
+      "description1": "A dog who chats with you. Write a paragraph, and it wags its tail in response.",
+      "description2": "Not cold AI analysis, but conversation like a friend.",
+      "description3": "It remembers what you've said, who you care about, and the ups and downs you've been through."
+    },
+    "features": {
+      "title": "Why Choose Wuzu",
+      "chat": {
+        "title": "Conversational Journaling",
+        "description": "No more staring at blank pages. Just chat about your day like you're talking to a friend."
+      },
+      "emotion": {
+        "title": "3D Emotion Understanding",
+        "description": "Using the psychological AVD model to understand your emotions through energy, feeling, and control dimensions."
+      },
+      "gratitude": {
+        "title": "Auto Gratitude Collection",
+        "description": "With each entry, Wuzu finds people and things to be grateful for. Over time, see the beauty in your life."
+      },
+      "encryption": {
+        "title": "End-to-End Encryption",
+        "description": "Your diary is yours alone. Encrypted storage, absolute privacy."
+      },
+      "anonymous": {
+        "title": "Anonymous Warm Connections",
+        "description": "Want to share? AI removes personal info for anonymous sharing. Those needing support are seen first."
+      },
+      "review": {
+        "title": "Review & Analysis",
+        "description": "See emotional patterns in quadrant charts, track gratitude lists. In low moments, your journal reminds you what you've overcome."
+      }
+    },
+    "connection": {
+      "title": "Anonymous Dialogue, Genuine Connection",
+      "description1": "When you see someone's diary, you can leave a message.",
+      "description2": "No need to know who they are, or reveal who you are.",
+      "description3": "Simply letting a stranger know:",
+      "description4": "Someone read their story. Someone cares."
+    },
+    "gamification": {
+      "title": "Make Journaling a Habit",
+      "description1": "Earn heart points by journaling, dress up WUZU with new collars, hats, and outfits.",
+      "description2": "Build streaks with consecutive journaling, unlock milestone rewards.",
+      "description3": "From 3 days, 7 days, 30 days... all the way to 1000+ days.",
+      "milestones": {
+        "day3": "3 Days",
+        "day7": "7 Days",
+        "day30": "30 Days",
+        "day100": "100 Days",
+        "day365": "365 Days"
+      }
+    },
+    "cta": {
+      "title": "Start Your Journal",
+      "description": "A companion is listening. Just focus on what you want to say.",
+      "madeBy": "Made with love by",
+      "withLove": ""
+    },
+    "contact": {
+      "contactUs": "Contact Us"
+    },
+    "footer": {
+      "copyright": "© 2025 wuzu"
+    }
+  },
   "app": {
     "title": "wuzu",
     "description": "Journal through conversation",
