@@ -47,6 +47,39 @@
       "description3": "只是單純地，讓一個陌生人知道：",
       "description4": "有人讀了他的故事，有人在乎。"
     },
+    "dressUp": {
+      "title": "幫 WUZU 換裝",
+      "description": "試試看不同的造型！在 App 裡用心點數解鎖更多裝扮",
+      "tabs": {
+        "collar": "項圈",
+        "outfit": "服裝",
+        "hat": "帽子"
+      },
+      "outfits": {
+        "none": "無",
+        "rain_coat": "雨衣",
+        "hood": "連帽",
+        "witch": "巫師",
+        "boy": "男孩"
+      },
+      "hats": {
+        "none": "無",
+        "rain_coat": "雨帽",
+        "hood": "兜帽",
+        "witch": "巫師帽",
+        "boy": "男孩帽"
+      },
+      "colors": {
+        "red": "紅色",
+        "orange": "橘色",
+        "yellow": "黃色",
+        "green": "綠色",
+        "blue": "藍色",
+        "purple": "紫色",
+        "pink": "粉色"
+      },
+      "tip": "下載 App 後，寫日記可以獲得心點數來解鎖這些裝扮！"
+    },
     "gamification": {
       "title": "讓寫日記變成習慣",
       "description1": "寫日記獲得心點數，幫 WUZU 換上新項圈、帽子、裝扮。",

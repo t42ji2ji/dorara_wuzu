@@ -60,6 +60,39 @@
         "day365": "365 Days"
       }
     },
+    "dressUp": {
+      "title": "Dress Up WUZU",
+      "description": "Try different looks! Unlock more outfits with heart points in the App",
+      "tabs": {
+        "collar": "Collar",
+        "outfit": "Outfit",
+        "hat": "Hat"
+      },
+      "outfits": {
+        "none": "None",
+        "rain_coat": "Raincoat",
+        "hood": "Hoodie",
+        "witch": "Wizard",
+        "boy": "Boy"
+      },
+      "hats": {
+        "none": "None",
+        "rain_coat": "Rain Hat",
+        "hood": "Hood",
+        "witch": "Wizard Hat",
+        "boy": "Boy Cap"
+      },
+      "colors": {
+        "red": "Red",
+        "orange": "Orange",
+        "yellow": "Yellow",
+        "green": "Green",
+        "blue": "Blue",
+        "purple": "Purple",
+        "pink": "Pink"
+      },
+      "tip": "Download the App and earn heart points by journaling to unlock these outfits!"
+    },
     "cta": {
       "title": "Start Your Journal",
       "description": "A companion is listening. Just focus on what you want to say.",

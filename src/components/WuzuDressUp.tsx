@@ -8,38 +8,40 @@ import {
 } from '@rive-app/react-webgl2';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from './ui/button';
 import { Shirt, Crown, Palette } from 'lucide-react';
 
 const OUTFITS = [
-  { id: 'none', label: '無', emoji: '🐕' },
-  { id: 'rain_coat', label: '雨衣', emoji: '🌧️' },
-  { id: 'hood', label: '連帽', emoji: '🧥' },
-  { id: 'witch', label: '巫師', emoji: '🧙' },
-  { id: 'boy', label: '男孩', emoji: '👦' },
+  { id: 'none', emoji: '🐕' },
+  { id: 'rain_coat', emoji: '🌧️' },
+  { id: 'hood', emoji: '🧥' },
+  { id: 'witch', emoji: '🧙' },
+  { id: 'boy', emoji: '👦' },
 ];
 
 const HATS = [
-  { id: 'none', label: '無', emoji: '🐕' },
-  { id: 'rain_coat', label: '雨帽', emoji: '🌧️' },
-  { id: 'hood', label: '兜帽', emoji: '🧢' },
-  { id: 'witch', label: '巫師帽', emoji: '🎃' },
-  { id: 'boy', label: '男孩帽', emoji: '👦' },
+  { id: 'none', emoji: '🐕' },
+  { id: 'rain_coat', emoji: '🌧️' },
+  { id: 'hood', emoji: '🧢' },
+  { id: 'witch', emoji: '🎃' },
+  { id: 'boy', emoji: '👦' },
 ];
 
 const COLLAR_COLORS = [
-  { id: 'red', color: '#E53935', label: '紅色', r: 229, g: 57, b: 53 },
-  { id: 'orange', color: '#FB8C00', label: '橘色', r: 251, g: 140, b: 0 },
-  { id: 'yellow', color: '#FDD835', label: '黃色', r: 253, g: 216, b: 53 },
-  { id: 'green', color: '#43A047', label: '綠色', r: 67, g: 160, b: 71 },
-  { id: 'blue', color: '#1E88E5', label: '藍色', r: 30, g: 136, b: 229 },
-  { id: 'purple', color: '#8E24AA', label: '紫色', r: 142, g: 36, b: 170 },
-  { id: 'pink', color: '#EC407A', label: '粉色', r: 236, g: 64, b: 122 },
+  { id: 'red', color: '#E53935', r: 229, g: 57, b: 53 },
+  { id: 'orange', color: '#FB8C00', r: 251, g: 140, b: 0 },
+  { id: 'yellow', color: '#FDD835', r: 253, g: 216, b: 53 },
+  { id: 'green', color: '#43A047', r: 67, g: 160, b: 71 },
+  { id: 'blue', color: '#1E88E5', r: 30, g: 136, b: 229 },
+  { id: 'purple', color: '#8E24AA', r: 142, g: 36, b: 170 },
+  { id: 'pink', color: '#EC407A', r: 236, g: 64, b: 122 },
 ];
 
 type TabType = 'outfit' | 'hat' | 'collar';
 
 const WuzuDressUp = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<TabType>('collar');
   const [selectedOutfit, setSelectedOutfit] = useState('none');
   const [selectedHat, setSelectedHat] = useState('none');
@@ -179,9 +181,9 @@ const WuzuDressUp = () => {
   };
 
   const tabs = [
-    { id: 'collar' as TabType, label: '項圈', icon: <Palette className="h-4 w-4" /> },
-    { id: 'outfit' as TabType, label: '服裝', icon: <Shirt className="h-4 w-4" /> },
-    { id: 'hat' as TabType, label: '帽子', icon: <Crown className="h-4 w-4" /> },
+    { id: 'collar' as TabType, label: t('home.dressUp.tabs.collar'), icon: <Palette className="h-4 w-4" /> },
+    { id: 'outfit' as TabType, label: t('home.dressUp.tabs.outfit'), icon: <Shirt className="h-4 w-4" /> },
+    { id: 'hat' as TabType, label: t('home.dressUp.tabs.hat'), icon: <Crown className="h-4 w-4" /> },
   ];
 
   return (
@@ -194,10 +196,10 @@ const WuzuDressUp = () => {
         className="text-center mb-8"
       >
         <h2 className="text-3xl font-bold text-foreground mb-4">
-          幫 WUZU 換裝
+          {t('home.dressUp.title')}
         </h2>
         <p className="text-muted-foreground">
-          試試看不同的造型！在 App 裡用心點數解鎖更多裝扮
+          {t('home.dressUp.description')}
         </p>
       </motion.div>
 
@@ -268,7 +270,7 @@ const WuzuDressUp = () => {
                   }`}
                 >
                   <div className="text-2xl mb-1">{outfit.emoji}</div>
-                  <div className="text-sm text-foreground">{outfit.label}</div>
+                  <div className="text-sm text-foreground">{t(`home.dressUp.outfits.${outfit.id}`)}</div>
                 </button>
               ))}
             </div>
@@ -287,7 +289,7 @@ const WuzuDressUp = () => {
                   }`}
                 >
                   <div className="text-2xl mb-1">{hat.emoji}</div>
-                  <div className="text-sm text-foreground">{hat.label}</div>
+                  <div className="text-sm text-foreground">{t(`home.dressUp.hats.${hat.id}`)}</div>
                 </button>
               ))}
             </div>
@@ -305,7 +307,7 @@ const WuzuDressUp = () => {
                       : 'border-transparent'
                   }`}
                   style={{ backgroundColor: collar.color }}
-                  title={collar.label}
+                  title={t(`home.dressUp.colors.${collar.id}`)}
                 />
               ))}
             </div>
@@ -314,7 +316,7 @@ const WuzuDressUp = () => {
 
         {/* Info text */}
         <p className="text-center text-sm text-muted-foreground mt-6">
-          💡 下載 App 後，寫日記可以獲得心點數來解鎖這些裝扮！
+          💡 {t('home.dressUp.tip')}
         </p>
       </motion.div>
     </div>
