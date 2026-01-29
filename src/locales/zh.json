@@ -1,0 +1,74 @@
+{
+  "app": {
+    "title": "wuzu",
+    "description": "用聊天的方式，寫日記",
+    "subdescription": "wuzu 是你的 AI 日記夥伴，陪你用最自然的方式記錄生活。",
+    "createdBy": "創建者",
+    "copyright": "© 2025 wuzu",
+    "contact": {
+      "email": "電子郵件",
+      "twitter": "推特",
+      "threads": "Threads"
+    }
+  },
+  "features": {
+    "chat": {
+      "title": "聊天寫日記",
+      "description": "不用面對空白頁面，像跟朋友聊天一樣寫日記。"
+    },
+    "emotion": {
+      "title": "深度情緒理解",
+      "description": "導入 AVD 心情模型，不只是快樂或難過，更深刻理解情緒本身。"
+    },
+    "backup": {
+      "title": "資料安全備份",
+      "description": "你的日記安全備份在雲端，完善的匯出系統，不用擔心資料丟失。"
+    }
+  },
+  "privacy": {
+    "title": "隱私政策",
+    "subtitle": "你的隱私對我們很重要。以下是我們如何保護你的日記。",
+    "backToHome": "返回首頁",
+    "dataProtection": {
+      "title": "資料保護",
+      "description": "你的日記安全存放",
+      "content": "wuzu 使用加密技術保護你的日記資料。所有資料都安全地儲存在雲端，只有你可以存取自己的日記內容。"
+    },
+    "backup": {
+      "title": "安全備份",
+      "description": "不用擔心資料丟失",
+      "content": "wuzu 提供完善的雲端備份機制，確保你的日記不會因為裝置遺失或損壞而消失。你也可以隨時匯出所有日記資料。"
+    },
+    "privacy": {
+      "title": "隱私保護",
+      "description": "你的情緒只屬於你",
+      "content": "wuzu 的 AI 分析只用於幫助你理解自己的情緒。我們不會將你的日記內容分享給第三方，也不會用於廣告投放。"
+    },
+    "security": {
+      "title": "安全性",
+      "description": "多重安全防護",
+      "content": "我們採用業界標準的安全措施保護你的帳號和資料。包括端對端加密、安全認證等機制，確保你的隱私不受侵害。"
+    },
+    "contact": {
+      "title": "聯繫我們",
+      "description": "對我們的隱私政策有疑問？",
+      "content": "如果你對此隱私政策或我們如何處理你的資訊有任何疑問，請隨時與我們聯繫。",
+      "email": "透過電子郵件聯繫"
+    },
+    "lastUpdated": "最後更新：2025年1月"
+  },
+  "contactForm": {
+    "title": "聯繫我們",
+    "subtitle": "有任何問題或回饋，歡迎聯繫！",
+    "name": "你的名字",
+    "namePlaceholder": "請輸入你的名字",
+    "email": "你的電子郵件",
+    "emailPlaceholder": "請輸入你的電子郵件",
+    "subject": "主題",
+    "subjectPlaceholder": "這是關於什麼的？",
+    "message": "訊息",
+    "messagePlaceholder": "告訴我們更多關於你的問題或回饋...",
+    "sendButton": "發送訊息",
+    "sending": "發送中..."
+  }
+}

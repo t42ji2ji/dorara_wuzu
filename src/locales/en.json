@@ -1,0 +1,74 @@
+{
+  "app": {
+    "title": "wuzu",
+    "description": "Journal through conversation",
+    "subdescription": "wuzu is your AI diary companion, helping you record life in the most natural way.",
+    "createdBy": "Created by",
+    "copyright": "© 2025 wuzu",
+    "contact": {
+      "email": "Support Email",
+      "twitter": "Twitter",
+      "threads": "Threads"
+    }
+  },
+  "features": {
+    "chat": {
+      "title": "Chat-based Journaling",
+      "description": "No blank page anxiety. Write your diary like chatting with a friend."
+    },
+    "emotion": {
+      "title": "Deep Emotion Understanding",
+      "description": "Powered by the AVD emotion model — not just happy or sad, but a deeper understanding of your feelings."
+    },
+    "backup": {
+      "title": "Secure Data Backup",
+      "description": "Your diary is safely backed up in the cloud with a complete export system. Never worry about losing your entries."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Your privacy matters to us. Here's how we protect your diary.",
+    "backToHome": "Back to Home",
+    "dataProtection": {
+      "title": "Data Protection",
+      "description": "Your diary is stored securely",
+      "content": "wuzu uses encryption to protect your diary data. All data is securely stored in the cloud, and only you can access your journal entries."
+    },
+    "backup": {
+      "title": "Secure Backup",
+      "description": "Never worry about data loss",
+      "content": "wuzu provides a comprehensive cloud backup system, ensuring your diary won't disappear if your device is lost or damaged. You can also export all your diary data at any time."
+    },
+    "privacy": {
+      "title": "Privacy Protection",
+      "description": "Your emotions belong to you",
+      "content": "wuzu's AI analysis is only used to help you understand your own emotions. We never share your diary content with third parties or use it for advertising."
+    },
+    "security": {
+      "title": "Security",
+      "description": "Multi-layered security",
+      "content": "We employ industry-standard security measures to protect your account and data, including end-to-end encryption and secure authentication to ensure your privacy is never compromised."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Questions about our privacy policy?",
+      "content": "If you have any questions about this privacy policy or how we handle your information, please don't hesitate to contact us.",
+      "email": "Contact via Email"
+    },
+    "lastUpdated": "Last updated: January 2025"
+  },
+  "contactForm": {
+    "title": "Contact Us",
+    "subtitle": "Questions or feedback? We'd love to hear from you!",
+    "name": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "email": "Your Email",
+    "emailPlaceholder": "Enter your email",
+    "subject": "Subject",
+    "subjectPlaceholder": "What's this about?",
+    "message": "Message",
+    "messagePlaceholder": "Tell us more about your question or feedback...",
+    "sendButton": "Send Message",
+    "sending": "Sending..."
+  }
+}
