@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import { ArrowLeft, Cloud, Lock, Shield, Eye } from 'lucide-react'
+import { ArrowLeft, Cloud, Lock, Shield, Eye, Bot } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
@@ -104,6 +104,30 @@ const PrivacyPolicy = () => {
                             <CardContent>
                                 <p className="text-foreground leading-relaxed">
                                     {t("privacy.privacy.content")}
+                                </p>
+                            </CardContent>
+                        </Card>
+
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center gap-2">
+                                    <Bot className="h-5 w-5 text-indigo-600" />
+                                    {t("privacy.ai.title")}
+                                </CardTitle>
+                                <CardDescription>
+                                    {t("privacy.ai.description")}
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-foreground leading-relaxed mb-3">
+                                    {t("privacy.ai.content")}
+                                </p>
+                                <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed">
+                                    <li>{t("privacy.ai.gemini")}</li>
+                                    <li>{t("privacy.ai.groq")}</li>
+                                </ul>
+                                <p className="text-foreground leading-relaxed mt-3">
+                                    {t("privacy.ai.footer")}
                                 </p>
                             </CardContent>
                         </Card>

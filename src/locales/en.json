@@ -150,7 +150,15 @@
     "privacy": {
       "title": "Privacy Protection",
       "description": "Your emotions belong to you",
-      "content": "wuzu's AI analysis is only used to help you understand your own emotions. We never share your diary content with third parties or use it for advertising."
+      "content": "wuzu uses AI to help you understand your emotions. Your diary content is processed by trusted AI services solely for the purpose of generating summaries, mood analysis, and personalized messages. We never use your data for advertising or sell it to third parties."
+    },
+    "ai": {
+      "title": "AI & Third-Party Services",
+      "description": "How we use AI to enhance your experience",
+      "content": "wuzu uses the following third-party AI services to process your data:",
+      "gemini": "Google Gemini — Generates diary summaries, mood analysis, companion responses, morning messages, and weekly reports based on your diary entries.",
+      "groq": "Groq (Whisper) — Transcribes voice recordings into text when you use the voice diary feature (Android only).",
+      "footer": "All AI processing is done through our secure backend servers. Your data is sent only for the purpose of providing the app's features and is not used for training AI models. You can review and manage your AI-related data in the app's Settings under \"AI Memory\"."
     },
     "security": {
       "title": "Security",
@@ -163,7 +171,7 @@
       "content": "If you have any questions about this privacy policy or how we handle your information, please don't hesitate to contact us.",
       "email": "Contact via Email"
     },
-    "lastUpdated": "Last updated: January 2025"
+    "lastUpdated": "Last updated: February 2026"
   },
   "contactForm": {
     "title": "Contact Us",
