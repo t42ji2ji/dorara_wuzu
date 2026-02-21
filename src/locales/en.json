@@ -158,7 +158,7 @@
       "content": "wuzu uses the following third-party AI services to process your data:",
       "gemini": "Google Gemini — Generates diary summaries, mood analysis, companion responses, morning messages, and weekly reports based on your diary entries.",
       "groq": "Groq (Whisper) — Transcribes voice recordings into text when you use the voice diary feature (Android only).",
-      "footer": "All AI processing is done through our secure backend servers. Your data is sent only for the purpose of providing the app's features and is not used for training AI models. You can review and manage your AI-related data in the app's Settings under \"AI Memory\"."
+      "footer": "All AI processing is done through our secure backend servers. Your data is sent only for the purpose of providing the app's features and is not used for training AI models. Data sent to third-party AI services is not linked to your personal identity or account. You can review and manage your AI-related data in the app's Settings under \"AI Memory\"."
     },
     "security": {
       "title": "Security",
