@@ -17,6 +17,7 @@ import {
   Send,
   Mail,
   Twitter,
+  Download,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { AppStoreButton } from 'react-mobile-app-button';
@@ -181,7 +182,7 @@ const Home = () => {
           >
             <AppStoreButton
               theme={theme === 'dark' ? 'dark' : 'light'}
-              url="https://apps.apple.com/tw/app/wuzu/id6744425830"
+              url="https://apps.apple.com/tw/app/wuzu/id6757849464?l=en-GB"
             />
           </motion.div>
 
@@ -368,7 +369,7 @@ const Home = () => {
             <div className="flex justify-center mb-8">
               <AppStoreButton
                 theme={theme === 'dark' ? 'dark' : 'light'}
-                url="https://apps.apple.com/tw/app/wuzu/id6744425830"
+                url="https://apps.apple.com/tw/app/wuzu/id6757849464?l=en-GB"
               />
             </div>
             <p className="text-sm text-muted-foreground">
@@ -414,6 +415,28 @@ const Home = () => {
               >
                 <Twitter className="h-4 w-4" />
                 Twitter
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a
+                href="https://apps.apple.com/tw/app/wuzu/id6757849464?l=en-GB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Download className="h-4 w-4" />
+                App Store
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a
+                href="https://line.me/ti/g2/Kv6bk2444cTtzrojfHZM-HCnRhOy0G669NyO-Q?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <Users className="h-4 w-4" />
+                LINE {t('home.contact.community')}
               </a>
             </Button>
           </div>
