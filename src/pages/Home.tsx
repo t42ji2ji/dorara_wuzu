@@ -147,7 +147,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-gradient-wuzu min-h-screen">
+    <div className="bg-gradient-wuzu min-h-screen overflow-x-hidden">
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
         <motion.div
@@ -390,12 +390,12 @@ const Home = () => {
               <img
                 src="/screenshots/anonymous-diary.png"
                 alt="Anonymous Diary"
-                className="w-48 sm:w-56 rounded-[2rem] shadow-2xl border border-white/20"
+                className="w-36 sm:w-48 md:w-56 rounded-[2rem] shadow-2xl border border-white/20"
               />
               <img
                 src="/screenshots/exchange-diary.png"
                 alt="Exchange Diary"
-                className="w-48 sm:w-56 rounded-[2rem] shadow-2xl border border-white/20 mt-12"
+                className="w-36 sm:w-48 md:w-56 rounded-[2rem] shadow-2xl border border-white/20 mt-12"
               />
             </motion.div>
             <motion.div
