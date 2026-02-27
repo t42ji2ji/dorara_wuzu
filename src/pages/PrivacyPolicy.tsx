@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import { ArrowLeft, Cloud, Lock, Shield, Eye, Bot } from 'lucide-react'
+import { ArrowLeft, Cloud, Lock, Shield, Bot, Database, ExternalLink } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
     }
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-gradient-wuzu">
             <div className="container mx-auto px-4 py-8">
                 <motion.div
                     initial="hidden"
@@ -57,10 +57,40 @@ const PrivacyPolicy = () => {
 
                     {/* Main Content */}
                     <motion.div variants={itemVariants} className="grid gap-6">
+                        {/* Data We Collect */}
                         <Card>
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-2">
-                                    <Shield className="h-5 w-5 text-green-600" />
+                                    <Database className="h-5 w-5 text-primary" />
+                                    {t("privacy.dataCollection.title")}
+                                </CardTitle>
+                                <CardDescription>
+                                    {t("privacy.dataCollection.description")}
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <p className="text-foreground leading-relaxed mb-3">
+                                    {t("privacy.dataCollection.content")}
+                                </p>
+                                <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed">
+                                    <li>{t("privacy.dataCollection.items.diary")}</li>
+                                    <li>{t("privacy.dataCollection.items.voice")}</li>
+                                    <li>{t("privacy.dataCollection.items.mood")}</li>
+                                    <li>{t("privacy.dataCollection.items.gratitude")}</li>
+                                    <li>{t("privacy.dataCollection.items.profile")}</li>
+                                    <li>{t("privacy.dataCollection.items.aiMemory")}</li>
+                                </ul>
+                                <p className="text-muted-foreground text-sm mt-3">
+                                    {t("privacy.dataCollection.note")}
+                                </p>
+                            </CardContent>
+                        </Card>
+
+                        {/* Data Protection */}
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center gap-2">
+                                    <Shield className="h-5 w-5 text-primary" />
                                     {t("privacy.dataProtection.title")}
                                 </CardTitle>
                                 <CardDescription>
@@ -74,10 +104,11 @@ const PrivacyPolicy = () => {
                             </CardContent>
                         </Card>
 
+                        {/* Secure Backup */}
                         <Card>
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-2">
-                                    <Cloud className="h-5 w-5 text-blue-600" />
+                                    <Cloud className="h-5 w-5 text-primary" />
                                     {t("privacy.backup.title")}
                                 </CardTitle>
                                 <CardDescription>
@@ -91,51 +122,83 @@ const PrivacyPolicy = () => {
                             </CardContent>
                         </Card>
 
+                        {/* AI & Third-Party Services */}
                         <Card>
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-2">
-                                    <Eye className="h-5 w-5 text-purple-600" />
-                                    {t("privacy.privacy.title")}
-                                </CardTitle>
-                                <CardDescription>
-                                    {t("privacy.privacy.description")}
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-foreground leading-relaxed">
-                                    {t("privacy.privacy.content")}
-                                </p>
-                            </CardContent>
-                        </Card>
-
-                        <Card>
-                            <CardHeader>
-                                <CardTitle className="flex items-center gap-2">
-                                    <Bot className="h-5 w-5 text-indigo-600" />
+                                    <Bot className="h-5 w-5 text-primary" />
                                     {t("privacy.ai.title")}
                                 </CardTitle>
                                 <CardDescription>
                                     {t("privacy.ai.description")}
                                 </CardDescription>
                             </CardHeader>
-                            <CardContent>
-                                <p className="text-foreground leading-relaxed mb-3">
+                            <CardContent className="space-y-4">
+                                <p className="text-foreground leading-relaxed font-medium">
+                                    {t("privacy.ai.consent")}
+                                </p>
+                                <p className="text-foreground leading-relaxed">
                                     {t("privacy.ai.content")}
                                 </p>
-                                <ul className="list-disc list-inside space-y-2 text-foreground leading-relaxed">
-                                    <li>{t("privacy.ai.gemini")}</li>
-                                    <li>{t("privacy.ai.groq")}</li>
-                                </ul>
-                                <p className="text-foreground leading-relaxed mt-3">
+
+                                {/* Google Gemini */}
+                                <div className="rounded-lg border p-4 space-y-2">
+                                    <h4 className="font-semibold text-foreground">
+                                        {t("privacy.ai.geminiTitle")}
+                                    </h4>
+                                    <p className="text-foreground leading-relaxed text-sm">
+                                        {t("privacy.ai.geminiData")}
+                                    </p>
+                                    <p className="text-foreground leading-relaxed text-sm">
+                                        {t("privacy.ai.geminiPurpose")}
+                                    </p>
+                                    <a
+                                        href={t("privacy.ai.geminiPolicyUrl")}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                                    >
+                                        {t("privacy.ai.geminiPolicy")}
+                                        <ExternalLink className="h-3 w-3" />
+                                    </a>
+                                </div>
+
+                                {/* Groq Whisper */}
+                                <div className="rounded-lg border p-4 space-y-2">
+                                    <h4 className="font-semibold text-foreground">
+                                        {t("privacy.ai.groqTitle")}
+                                    </h4>
+                                    <p className="text-foreground leading-relaxed text-sm">
+                                        {t("privacy.ai.groqData")}
+                                    </p>
+                                    <p className="text-foreground leading-relaxed text-sm">
+                                        {t("privacy.ai.groqPurpose")}
+                                    </p>
+                                    <a
+                                        href={t("privacy.ai.groqPolicyUrl")}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                                    >
+                                        {t("privacy.ai.groqPolicy")}
+                                        <ExternalLink className="h-3 w-3" />
+                                    </a>
+                                </div>
+
+                                <p className="text-foreground leading-relaxed">
                                     {t("privacy.ai.footer")}
+                                </p>
+                                <p className="text-muted-foreground text-sm">
+                                    {t("privacy.ai.retention")}
                                 </p>
                             </CardContent>
                         </Card>
 
+                        {/* Security */}
                         <Card>
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-2">
-                                    <Lock className="h-5 w-5 text-orange-600" />
+                                    <Lock className="h-5 w-5 text-primary" />
                                     {t("privacy.security.title")}
                                 </CardTitle>
                                 <CardDescription>
@@ -149,6 +212,7 @@ const PrivacyPolicy = () => {
                             </CardContent>
                         </Card>
 
+                        {/* Contact */}
                         <Card>
                             <CardHeader>
                                 <CardTitle>{t("privacy.contact.title")}</CardTitle>

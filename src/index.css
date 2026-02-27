@@ -4,77 +4,77 @@
 
 @layer base {
   :root {
-    --background: 30 40% 98%;
-    --foreground: 20 20% 20%;
+    --background: 220 14% 96%;
+    --foreground: 219 37% 17%;
 
-    --card: 30 30% 97%;
-    --card-foreground: 20 20% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 219 37% 17%;
 
-    --popover: 30 30% 97%;
-    --popover-foreground: 20 20% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 219 37% 17%;
 
-    --primary: 25 70% 55%;
+    --primary: 219 37% 17%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 25% 93%;
-    --secondary-foreground: 20 20% 25%;
+    --secondary: 0 0% 91%;
+    --secondary-foreground: 219 37% 20%;
 
-    --muted: 30 20% 94%;
-    --muted-foreground: 20 10% 45%;
+    --muted: 220 10% 94%;
+    --muted-foreground: 219 15% 45%;
 
-    --accent: 35 60% 92%;
-    --accent-foreground: 25 60% 35%;
+    --accent: 210 40% 94%;
+    --accent-foreground: 219 37% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 30 20% 88%;
-    --input: 30 20% 88%;
-    --ring: 25 70% 55%;
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 219 37% 17%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --chart-1: 25 70% 55%;
+    --chart-1: 219 37% 17%;
     --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --chart-3: 210 50% 30%;
+    --chart-4: 205 67% 55%;
+    --chart-5: 214 52% 40%;
   }
 
   .dark {
-    --background: 20 15% 10%;
-    --foreground: 30 20% 95%;
+    --background: 211 53% 11%;
+    --foreground: 0 0% 95%;
 
-    --card: 20 15% 13%;
-    --card-foreground: 30 20% 95%;
+    --card: 219 25% 15%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 20 15% 13%;
-    --popover-foreground: 30 20% 95%;
+    --popover: 219 25% 15%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 25 65% 55%;
+    --primary: 210 50% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 20 15% 18%;
-    --secondary-foreground: 30 20% 90%;
+    --secondary: 244 16% 18%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 20 15% 18%;
-    --muted-foreground: 30 15% 60%;
+    --muted: 244 16% 18%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 25 30% 20%;
-    --accent-foreground: 25 50% 70%;
+    --accent: 214 30% 20%;
+    --accent-foreground: 210 40% 75%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 54% 56%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 20 15% 20%;
-    --input: 20 15% 20%;
-    --ring: 25 65% 55%;
+    --border: 215 20% 20%;
+    --input: 215 20% 20%;
+    --ring: 210 50% 60%;
 
-    --chart-1: 25 65% 55%;
+    --chart-1: 210 50% 60%;
     --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --chart-3: 205 67% 55%;
+    --chart-4: 214 52% 40%;
+    --chart-5: 219 37% 35%;
   }
 }
 
@@ -86,4 +86,62 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+}
+
+@layer components {
+  /* Wuzu gradient backgrounds matching app_theme.dart */
+  .bg-gradient-wuzu {
+    background: linear-gradient(
+      to bottom,
+      rgb(245, 245, 247) 0%,
+      rgb(223, 223, 224) 60%,
+      #D0E0F0 85%,
+      rgb(164, 207, 238) 90%
+    );
+  }
+
+  .dark .bg-gradient-wuzu {
+    background: linear-gradient(
+      to bottom,
+      #0D1B2A 0%,
+      #0D1B2A 60%,
+      #1B263B 80%,
+      #1E3A5F 100%
+    );
+  }
+
+  /* Frosted glass container matching AppTheme.containerOf */
+  .glass-container {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1rem;
+  }
+
+  .dark .glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Wuzu floating animation */
+@keyframes wuzu-float {
+  0%, 100% { transform: translateY(0) rotate(var(--float-rotate, 0deg)); }
+  50% { transform: translateY(-10px) rotate(calc(var(--float-rotate, 0deg) + 3deg)); }
+}
+
+.wuzu-float {
+  animation: wuzu-float var(--float-duration, 3s) ease-in-out infinite;
+  animation-delay: var(--float-delay, 0s);
+}
+
+@keyframes wuzu-wiggle {
+  0%, 100% { transform: rotate(5deg); }
+  50% { transform: rotate(-3deg); }
+}
+
+.wuzu-wiggle {
+  animation: wuzu-wiggle var(--wiggle-duration, 3s) ease-in-out infinite;
+  animation-delay: var(--wiggle-delay, 0s);
 }

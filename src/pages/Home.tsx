@@ -1,4 +1,3 @@
-import { useTheme } from '@/components/ThemeProvider';
 import { Button } from '@/components/ui/button';
 import {
   useRive,
@@ -18,12 +17,25 @@ import {
   Mail,
   Twitter,
   Download,
+  Smartphone,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { AppStoreButton } from 'react-mobile-app-button';
 import { Link } from 'react-router-dom';
 import { useCallback, useEffect } from 'react';
 import ContactForm from '@/components/ContactForm';
+
+const AppleIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+  </svg>
+);
+
+const AndroidIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.523 15.341a.96.96 0 0 0 .96-.96v-4.8a.96.96 0 0 0-1.92 0v4.8a.96.96 0 0 0 .96.96zm-11.046 0a.96.96 0 0 0 .96-.96v-4.8a.96.96 0 0 0-1.92 0v4.8a.96.96 0 0 0 .96.96zm11.666-8.082a.39.39 0 0 0 .536-.133l.756-1.267a.39.39 0 1 0-.67-.399l-.765 1.283a5.07 5.07 0 0 0-2.205-.98 5.07 5.07 0 0 0-2.593 0 5.07 5.07 0 0 0-2.205.98l-.765-1.283a.39.39 0 1 0-.67.4l.756 1.266a4.94 4.94 0 0 0-2.596 4.316h12.017a4.94 4.94 0 0 0-2.596-4.183zM9.87 9.541a.54.54 0 1 1 .001-1.081.54.54 0 0 1-.001 1.081zm4.26 0a.54.54 0 1 1 .001-1.081.54.54 0 0 1-.001 1.081zM7.32 16.541a1.44 1.44 0 0 0 1.44 1.44h.96v2.4a.96.96 0 0 0 1.92 0v-2.4h.72v2.4a.96.96 0 0 0 1.92 0v-2.4h.96a1.44 1.44 0 0 0 1.44-1.44v-5.52H7.32v5.52z" />
+  </svg>
+);
+
 import WuzuDressUp from '@/components/WuzuDressUp';
 
 const WuzuDog = () => {
@@ -83,7 +95,23 @@ const WuzuDog = () => {
 
 const Home = () => {
   const { t } = useTranslation();
-  const { theme } = useTheme();
+
+  const wuzuImages = [
+    '/wuzu/wolf.png',
+    '/wuzu/mouse.png',
+    '/wuzu/tiger-glasses.png',
+    '/wuzu/bunny.png',
+    '/wuzu/bear.png',
+    '/wuzu/sheep-cape.png',
+  ];
+
+  // Decorative floating wuzus around the features section
+  const floatingWuzus = [
+    { src: '/wuzu/hamster-witch.png', className: 'hidden lg:block absolute -left-20 top-24 w-36', rotate: -12 },
+    { src: '/wuzu/tiger-backpack.png', className: 'hidden lg:block absolute -right-20 top-1/3 w-32', rotate: 8 },
+    { src: '/wuzu/mouse-hat.png', className: 'hidden lg:block absolute -left-16 bottom-16 w-32', rotate: 10 },
+    { src: '/wuzu/sheep-bow.png', className: 'hidden lg:block absolute -right-20 bottom-24 w-36', rotate: -8 },
+  ];
 
   const features = [
     {
@@ -119,7 +147,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-background min-h-screen">
+    <div className="bg-gradient-wuzu min-h-screen">
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
         <motion.div
@@ -173,17 +201,40 @@ const Home = () => {
             </p>
           </motion.div>
 
-          {/* App Store Button */}
+          {/* Download & Community Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex justify-center mb-6"
+            className="flex flex-wrap justify-center gap-4 mb-6"
           >
-            <AppStoreButton
-              theme={theme === 'dark' ? 'dark' : 'light'}
-              url="https://apps.apple.com/tw/app/wuzu/id6757849464?l=en-GB"
-            />
+            <a
+              href="https://apps.apple.com/tw/app/wuzu/id6757849464?l=en-GB"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-container flex items-center gap-3 h-14 px-8 text-base font-medium text-foreground hover:bg-white/80 dark:hover:bg-white/15 transition-colors min-w-[200px] justify-center"
+            >
+              <AppleIcon className="h-5 w-5" />
+              App Store
+            </a>
+            <a
+              href="https://dorara.notion.site/30495e80ca378099810ce1f39fcba95a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-container flex items-center gap-3 h-14 px-8 text-base font-medium text-foreground hover:bg-white/80 dark:hover:bg-white/15 transition-colors min-w-[200px] justify-center"
+            >
+              <AndroidIcon className="h-5 w-5" />
+              {t('home.cta.androidBeta')}
+            </a>
+            <a
+              href="https://line.me/ti/g2/Kv6bk2444cTtzrojfHZM-HCnRhOy0G669NyO-Q?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-container flex items-center gap-3 h-14 px-8 text-base font-medium text-foreground hover:bg-white/80 dark:hover:bg-white/15 transition-colors min-w-[200px] justify-center"
+            >
+              <img src="/line-icon.png" alt="LINE" className="h-5 w-5 rounded-sm" />
+              {t('home.cta.joinLine')}
+            </a>
           </motion.div>
 
           {/* Scroll indicator */}
@@ -217,31 +268,65 @@ const Home = () => {
       </section>
 
       {/* Wuzu Companion Section */}
-      <section className="py-20 px-4 bg-accent/30">
-        <div className="max-w-3xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-foreground mb-6">
-              {t('home.companion.title')}
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {t('home.companion.description1')}
-              <br />
-              {t('home.companion.description2')}
-              <br />
-              {t('home.companion.description3')}
-            </p>
-          </motion.div>
+      <section className="py-20 px-4 bg-white/30 dark:bg-white/5 backdrop-blur-sm">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold text-foreground mb-6">
+                {t('home.companion.title')}
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                {t('home.companion.description1')}
+                <br />
+                {t('home.companion.description2')}
+                <br />
+                {t('home.companion.description3')}
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex justify-center"
+            >
+              <img
+                src="/screenshots/aichat.png"
+                alt="Wuzu AI Chat"
+                className="w-64 rounded-[2rem] shadow-2xl border border-white/20"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 px-4">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-4 overflow-hidden">
+        <div className="max-w-5xl mx-auto relative">
+          {/* Floating wuzus around the section */}
+          {floatingWuzus.map((wuzu, i) => (
+            <motion.img
+              key={wuzu.src}
+              src={wuzu.src}
+              alt=""
+              className={`${wuzu.className} wuzu-float`}
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 + i * 0.15 }}
+              style={{
+                '--float-rotate': `${wuzu.rotate}deg`,
+                '--float-duration': `${3 + i * 0.5}s`,
+                '--float-delay': `${i * 0.7}s`,
+              } as React.CSSProperties}
+            />
+          ))}
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -252,7 +337,7 @@ const Home = () => {
             {t('home.features.title')}
           </motion.h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={feature.titleKey}
@@ -260,8 +345,22 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-colors"
+                className="glass-container p-6 hover:border-primary/30 transition-colors relative overflow-visible"
               >
+                {/* Wuzu peeking from top-right */}
+                <motion.img
+                  src={wuzuImages[index]}
+                  alt=""
+                  className="absolute -top-14 -right-6 w-28 h-28 object-contain pointer-events-none z-10 wuzu-wiggle"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                  style={{
+                    '--wiggle-duration': `${2.5 + index * 0.3}s`,
+                    '--wiggle-delay': `${index * 0.4}s`,
+                  } as React.CSSProperties}
+                />
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
                   {feature.icon}
                 </div>
@@ -278,81 +377,65 @@ const Home = () => {
       </section>
 
       {/* Anonymous Connection Section */}
-      <section className="py-20 px-4 bg-accent/30">
-        <div className="max-w-3xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-6">
-              <Send className="h-8 w-8" />
-            </div>
-            <h2 className="text-3xl font-bold text-foreground mb-6">
-              {t('home.connection.title')}
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              {t('home.connection.description1')}
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              {t('home.connection.description2')}
-              <br />
-              {t('home.connection.description3')}
-              <br />
-              <span className="text-foreground font-medium">
-                {t('home.connection.description4')}
-              </span>
-            </p>
-          </motion.div>
+      <section className="py-20 px-4 bg-white/30 dark:bg-white/5 backdrop-blur-sm">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex justify-center gap-4"
+            >
+              <img
+                src="/screenshots/anonymous-diary.png"
+                alt="Anonymous Diary"
+                className="w-48 sm:w-56 rounded-[2rem] shadow-2xl border border-white/20"
+              />
+              <img
+                src="/screenshots/exchange-diary.png"
+                alt="Exchange Diary"
+                className="w-48 sm:w-56 rounded-[2rem] shadow-2xl border border-white/20 mt-12"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-6">
+                <Send className="h-8 w-8" />
+              </div>
+              <h2 className="text-3xl font-bold text-foreground mb-6">
+                {t('home.connection.title')}
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                {t('home.connection.description1')}
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                {t('home.connection.description2')}
+                <br />
+                {t('home.connection.description3')}
+                <br />
+                <span className="text-foreground font-medium">
+                  {t('home.connection.description4')}
+                </span>
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Gamification Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold text-foreground mb-6">
-              {t('home.gamification.title')}
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              {t('home.gamification.description1')}
-              <br />
-              {t('home.gamification.description2')}
-              <br />
-              {t('home.gamification.description3')}
-            </p>
-            <div className="flex justify-center gap-4 flex-wrap">
-              {['day3', 'day7', 'day30', 'day100', 'day365'].map((key, i) => (
-                <motion.span
-                  key={key}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: i * 0.1 }}
-                  className="px-4 py-2 rounded-full bg-primary/10 text-primary font-medium"
-                >
-                  {t(`home.gamification.milestones.${key}`)}
-                </motion.span>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* Dress Up Section */}
-      <section className="py-20 px-4 bg-accent/30">
+      <section className="py-20 px-4 bg-white/30 dark:bg-white/5 backdrop-blur-sm">
         <WuzuDressUp />
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-primary/5">
+      <section className="py-20 px-4 bg-white/20 dark:bg-white/5 backdrop-blur-sm">
         <div className="max-w-2xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -366,11 +449,40 @@ const Home = () => {
             <p className="text-muted-foreground mb-8">
               {t('home.cta.description')}
             </p>
-            <div className="flex justify-center mb-8">
-              <AppStoreButton
-                theme={theme === 'dark' ? 'dark' : 'light'}
-                url="https://apps.apple.com/tw/app/wuzu/id6757849464?l=en-GB"
-              />
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <Button variant="outline" size="lg" asChild className="glass-container min-w-[180px]">
+                <a
+                  href="https://apps.apple.com/tw/app/wuzu/id6757849464?l=en-GB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Download className="h-4 w-4" />
+                  App Store
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" asChild className="glass-container min-w-[180px]">
+                <a
+                  href="https://dorara.notion.site/30495e80ca378099810ce1f39fcba95a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Smartphone className="h-4 w-4" />
+                  {t('home.cta.androidBeta')}
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" asChild className="glass-container min-w-[180px]">
+                <a
+                  href="https://line.me/ti/g2/Kv6bk2444cTtzrojfHZM-HCnRhOy0G669NyO-Q?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <img src="/line-icon.png" alt="LINE" className="h-4 w-4 rounded-sm" />
+                  {t('home.cta.joinLine')}
+                </a>
+              </Button>
             </div>
             <p className="text-sm text-muted-foreground">
               {t('home.cta.madeBy')}{' '}
@@ -389,7 +501,7 @@ const Home = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-16 px-4 bg-muted/30">
+      <section className="py-16 px-4 bg-white/20 dark:bg-white/5 backdrop-blur-sm">
         <ContactForm />
       </section>
 

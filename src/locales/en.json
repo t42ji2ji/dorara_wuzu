@@ -97,7 +97,9 @@
       "title": "Start Your Journal",
       "description": "A companion is listening. Just focus on what you want to say.",
       "madeBy": "Made with love by",
-      "withLove": ""
+      "withLove": "",
+      "androidBeta": "Android Early Access",
+      "joinLine": "Join LINE Community"
     },
     "contact": {
       "contactUs": "Contact Us",
@@ -137,6 +139,20 @@
     "title": "Privacy Policy",
     "subtitle": "Your privacy matters to us. Here's how we protect your diary.",
     "backToHome": "Back to Home",
+    "dataCollection": {
+      "title": "Data We Collect",
+      "description": "What information wuzu collects and how",
+      "content": "wuzu collects the following data, all provided directly by you through your use of the app:",
+      "items": {
+        "diary": "Diary conversation content — The text you type during diary conversations with your companion.",
+        "voice": "Voice recordings — Audio you record when using the voice diary feature (Android only). Recordings are transcribed to text and are not stored after transcription.",
+        "mood": "Mood and emotion data — Derived from your diary content by AI analysis (valence, arousal, dominance scores).",
+        "gratitude": "Gratitude entries — People and things to be grateful for, extracted from your diary by AI.",
+        "profile": "Profile information — Display name, avatar preferences, and app settings you configure.",
+        "aiMemory": "AI memory — Contextual notes the companion remembers from your conversations to provide personalized responses."
+      },
+      "note": "wuzu does not collect your real name, phone number, location, contacts, or any data from other apps on your device."
+    },
     "dataProtection": {
       "title": "Data Protection",
       "description": "Your diary is stored securely",
@@ -147,18 +163,23 @@
       "description": "Never worry about data loss",
       "content": "wuzu provides a comprehensive cloud backup system, ensuring your diary won't disappear if your device is lost or damaged. You can also export all your diary data at any time."
     },
-    "privacy": {
-      "title": "Privacy Protection",
-      "description": "Your emotions belong to you",
-      "content": "wuzu uses AI to help you understand your emotions. Your diary content is processed by trusted AI services solely for the purpose of generating summaries, mood analysis, and personalized messages. We never use your data for advertising or sell it to third parties."
-    },
     "ai": {
       "title": "AI & Third-Party Services",
-      "description": "How we use AI to enhance your experience",
-      "content": "wuzu uses the following third-party AI services to process your data:",
-      "gemini": "Google Gemini — Generates diary summaries, mood analysis, companion responses, morning messages, and weekly reports based on your diary entries.",
-      "groq": "Groq (Whisper) — Transcribes voice recordings into text when you use the voice diary feature (Android only).",
-      "footer": "All AI processing is done through our secure backend servers. Your data is sent only for the purpose of providing the app's features and is not used for training AI models. Data sent to third-party AI services is not linked to your personal identity or account. You can review and manage your AI-related data in the app's Settings under \"AI Memory\"."
+      "description": "What data is shared, who it is shared with, and how it is protected",
+      "consent": "Before your data is processed by any third-party AI service, wuzu asks for your explicit consent within the app. You may review this consent at any time in the app's settings.",
+      "content": "wuzu uses the following third-party AI services. All requests are routed through our secure backend servers — your device never communicates directly with these services.",
+      "geminiTitle": "Google Gemini (provided by Google LLC)",
+      "geminiData": "Data sent: Your diary conversation text (the messages you type and the companion's responses). No account information, email address, device identifiers, or personal identity information is included.",
+      "geminiPurpose": "Purpose: Generating diary summaries, mood and emotion analysis, companion conversation responses, morning messages, and weekly reports.",
+      "geminiPolicy": "Google's privacy policy",
+      "geminiPolicyUrl": "https://policies.google.com/privacy",
+      "groqTitle": "Groq — Whisper (provided by Groq, Inc.)",
+      "groqData": "Data sent: Voice audio recordings you create using the voice diary feature (Android only). No account information or personal identity information is included.",
+      "groqPurpose": "Purpose: Converting voice recordings into text (speech-to-text transcription).",
+      "groqPolicy": "Groq's privacy policy",
+      "groqPolicyUrl": "https://groq.com/privacy-policy",
+      "footer": "Your data is sent to these services solely for the purposes described above. It is not used for advertising, not sold to any party, and not used for training AI models. Data sent to third-party AI services is not linked to your personal identity or account. Each third-party provider is contractually and by policy required to protect your data with standards equivalent to or exceeding our own. You can review and delete your AI-related data in the app's Settings under \"AI Memory\".",
+      "retention": "Data retention: Diary text and voice audio are sent to third-party AI services in real time for processing and are not stored by these services beyond the duration of the request. No persistent copy of your data is retained by the third-party AI providers."
     },
     "security": {
       "title": "Security",

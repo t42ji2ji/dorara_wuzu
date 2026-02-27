@@ -65,7 +65,7 @@ const Features = ({
     }
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-gradient-wuzu">
             <div className="container mx-auto pt-16 pb-16 px-4">
 
                 <Button
