@@ -405,7 +405,7 @@ const EmotionModel = () => {
       </section>
 
       {/* Academic reference - compact */}
-      <section className="py-12 px-4 bg-white/30 dark:bg-white/5 backdrop-blur-sm">
+      <section className="py-12 px-4 ">
         <div className="max-w-3xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
