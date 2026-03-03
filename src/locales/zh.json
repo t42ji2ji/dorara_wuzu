@@ -194,6 +194,76 @@
     },
     "lastUpdated": "最後更新：2026年2月"
   },
+  "emotionModel": {
+    "backToHome": "返回首頁",
+    "title": "AVD 情緒模型",
+    "subtitle": "不只是「開心」或「難過」——Wuzu 用三個維度，立體地理解你的每一種感受。",
+    "why": {
+      "title": "為什麼不只分「好心情」和「壞心情」？",
+      "description": "想想看：焦慮和悲傷都是「不開心」，但感覺完全不一樣。焦慮讓你坐立不安，悲傷讓你什麼都不想做。一個「不開心」的標籤，根本說不清這之間的差異。",
+      "anxious": "焦慮",
+      "anxiousDesc": "心跳加速、腦袋轉不停",
+      "sad": "悲傷",
+      "sadDesc": "什麼都不想做、很無力",
+      "punchline": "AVD 模型用三個維度，幫你精確描述「現在到底是什麼感覺」。"
+    },
+    "dimensions": {
+      "title": "三個維度，看見完整的情緒",
+      "subtitle": "每個維度從 1 到 10 分，組合起來就是你的情緒座標。",
+      "valence": {
+        "name": "正負向",
+        "short": "正負向",
+        "description": "這個感覺是愉快的，還是不舒服的？最直覺的一個維度。",
+        "negative": "負面",
+        "positive": "正面"
+      },
+      "arousal": {
+        "name": "激動度",
+        "short": "激動度",
+        "description": "你的身心有多「激動」？不管正面負面，都有平靜和高能量的差別。",
+        "low": "平靜",
+        "high": "激動"
+      },
+      "dominance": {
+        "name": "掌控感",
+        "short": "掌控感",
+        "description": "你覺得自己掌握局面嗎？這是區分焦慮（無力）和憤怒（有力）的關鍵。",
+        "low": "無力",
+        "high": "掌控"
+      }
+    },
+    "examples": {
+      "title": "看看實際的例子",
+      "subtitle": "同樣的情緒標籤，背後的三維座標截然不同。",
+      "excited": { "label": "興奮", "situation": "收到夢寐以求的錄取通知" },
+      "calm": { "label": "平靜滿足", "situation": "週末午後窩在沙發上看書" },
+      "anxious": { "label": "焦慮", "situation": "明天要上台報告還沒準備好" },
+      "sad": { "label": "低落無助", "situation": "被突然告知壞消息" },
+      "angry": { "label": "憤怒", "situation": "被人不公平地對待" },
+      "grateful": { "label": "感恩", "situation": "朋友默默幫了一個大忙" }
+    },
+    "howWuzu": {
+      "title": "Wuzu 怎麼做到的？",
+      "step1": {
+        "title": "AI 自動分析",
+        "description": "寫完日記後，Wuzu 從你的語氣、用詞和敘述自動判斷三個維度的分數。不用手動選心情貼圖。"
+      },
+      "step2": {
+        "title": "累積情緒軌跡",
+        "description": "每篇日記的分數會累積成你的情緒趨勢圖。發現「每週三壓力最大」或「運動完心情都不錯」這類隱藏模式。"
+      },
+      "step3": {
+        "title": "看見，就是療癒的開始",
+        "description": "我們不是要幫你「管理」情緒。當你能看見自己的情緒全貌，理解就自然發生了。"
+      },
+      "note": "基於 Mehrabian & Russell (1974) 提出的 PAD 情緒模型，這是情感心理學中被廣泛驗證的理論框架。"
+    },
+    "reference": {
+      "title": "學術參考",
+      "citation": "Mehrabian, A., & Russell, J. A. (1974). An approach to environmental psychology. MIT Press.",
+      "note": "PAD / AVD 模型被廣泛應用於情緒辨識、人機互動與心理健康研究，跨文化研究持續驗證其適用性。"
+    }
+  },
   "contactForm": {
     "title": "聯繫我們",
     "subtitle": "有任何問題或回饋，歡迎聯繫！",

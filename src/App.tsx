@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/ThemeProvider"
+import EmotionModel from "@/pages/EmotionModel"
 import Home from "@/pages/Home"
 import PrivacyPolicy from "@/pages/PrivacyPolicy"
 import { Toaster } from "react-hot-toast"
@@ -19,6 +20,7 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/emotion-model" element={<EmotionModel />} />
                     <Route path="/privacy" element={<PrivacyPolicy />} />
                 </Routes>
             </BrowserRouter>

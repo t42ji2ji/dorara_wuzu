@@ -194,6 +194,76 @@
     },
     "lastUpdated": "Last updated: February 2026"
   },
+  "emotionModel": {
+    "backToHome": "Back to Home",
+    "title": "AVD Emotion Model",
+    "subtitle": "Beyond just \"happy\" or \"sad\" — Wuzu uses three dimensions to truly understand how you feel.",
+    "why": {
+      "title": "Why not just \"good mood\" and \"bad mood\"?",
+      "description": "Think about it: anxiety and sadness are both \"unhappy,\" but they feel completely different. Anxiety makes you restless; sadness makes you want to do nothing. A single \"unhappy\" label can't capture the difference.",
+      "anxious": "Anxiety",
+      "anxiousDesc": "Racing heart, mind won't stop",
+      "sad": "Sadness",
+      "sadDesc": "No motivation, feeling helpless",
+      "punchline": "The AVD model uses three dimensions to precisely describe \"what am I actually feeling right now.\""
+    },
+    "dimensions": {
+      "title": "Three dimensions, one complete picture",
+      "subtitle": "Each dimension scored from 1 to 10 — together they form your emotion coordinate.",
+      "valence": {
+        "name": "Valence",
+        "short": "Valence",
+        "description": "Does this feel pleasant or unpleasant? The most intuitive dimension.",
+        "negative": "Negative",
+        "positive": "Positive"
+      },
+      "arousal": {
+        "name": "Arousal",
+        "short": "Arousal",
+        "description": "How \"activated\" are you? Both positive and negative emotions can be calm or intense.",
+        "low": "Calm",
+        "high": "Intense"
+      },
+      "dominance": {
+        "name": "Dominance",
+        "short": "Dominance",
+        "description": "Do you feel in control? This is the key to telling anxiety (helpless) from anger (empowered).",
+        "low": "Helpless",
+        "high": "In Control"
+      }
+    },
+    "examples": {
+      "title": "See it in action",
+      "subtitle": "Same emotion labels, very different 3D coordinates.",
+      "excited": { "label": "Excited", "situation": "Got the acceptance letter of your dreams" },
+      "calm": { "label": "Calm & Content", "situation": "Curled up on the couch reading on a weekend" },
+      "anxious": { "label": "Anxious", "situation": "Unprepared presentation tomorrow" },
+      "sad": { "label": "Sad & Helpless", "situation": "Received unexpected bad news" },
+      "angry": { "label": "Angry", "situation": "Treated unfairly by someone" },
+      "grateful": { "label": "Grateful", "situation": "A friend quietly helped you out" }
+    },
+    "howWuzu": {
+      "title": "How does Wuzu do it?",
+      "step1": {
+        "title": "AI auto-analysis",
+        "description": "After you write a journal entry, Wuzu reads your tone, word choice, and narrative to score all three dimensions automatically. No mood stickers needed."
+      },
+      "step2": {
+        "title": "Build your emotion trajectory",
+        "description": "Scores from each entry form your personal trend chart. Discover hidden patterns like \"Wednesdays are my most stressful\" or \"I'm always calmer after exercise.\""
+      },
+      "step3": {
+        "title": "Seeing is the start of healing",
+        "description": "We're not here to \"manage\" your emotions. When you can see the full picture, understanding follows naturally."
+      },
+      "note": "Based on the PAD Emotion Model by Mehrabian & Russell (1974), a widely validated framework in affective psychology."
+    },
+    "reference": {
+      "title": "Academic Reference",
+      "citation": "Mehrabian, A., & Russell, J. A. (1974). An approach to environmental psychology. MIT Press.",
+      "note": "The PAD / AVD model is widely used in emotion recognition, human-computer interaction, and mental health research, with cross-cultural studies validating its applicability."
+    }
+  },
   "contactForm": {
     "title": "Contact Us",
     "subtitle": "Questions or feedback? We'd love to hear from you!",

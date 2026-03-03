@@ -561,6 +561,9 @@ const Home = () => {
           <p className="text-muted-foreground text-sm">{t('home.footer.copyright')}</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <Button variant="ghost" size="sm" asChild>
+              <Link to="/emotion-model">{t('emotionModel.title')}</Link>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
               <Link to="/privacy">{t('privacy.title')}</Link>
             </Button>
           </div>
