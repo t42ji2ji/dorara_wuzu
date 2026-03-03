@@ -18,6 +18,7 @@ import {
   Twitter,
   Download,
   Smartphone,
+  ArrowRight,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
@@ -123,6 +124,7 @@ const Home = () => {
       icon: <Heart className="h-6 w-6" />,
       titleKey: 'home.features.emotion.title',
       descriptionKey: 'home.features.emotion.description',
+      link: '/emotion-model',
     },
     {
       icon: <Sparkles className="h-6 w-6" />,
@@ -370,6 +372,15 @@ const Home = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {t(feature.descriptionKey)}
                 </p>
+                {feature.link && (
+                  <Link
+                    to={feature.link}
+                    className="inline-flex items-center gap-1 text-sm text-primary font-medium mt-3 hover:underline"
+                  >
+                    {t('home.features.learnMore')}
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                )}
               </motion.div>
             ))}
           </div>
