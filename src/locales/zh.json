@@ -79,7 +79,8 @@
         "purple": "紫色",
         "pink": "粉色"
       },
-      "tip": "下載 App 後，寫日記可以獲得心點數來解鎖這些裝扮！"
+      "tip": "下載 App 後，寫日記可以獲得心點數來解鎖這些裝扮！",
+      "viewAll": "試穿全部裝備"
     },
     "gamification": {
       "title": "讓寫日記變成習慣",
@@ -99,7 +100,7 @@
       "description": "有個夥伴在聽，你只需要專注在「想說什麼」。",
       "madeBy": "由",
       "withLove": "用心打造",
-      "androidBeta": "Android 搶先體驗",
+      "androidDownload": "Google Play",
       "joinLine": "加入 LINE 社群"
     },
     "contact": {
@@ -264,6 +265,11 @@
       "citation": "Mehrabian, A., & Russell, J. A. (1974). An approach to environmental psychology. MIT Press.",
       "note": "PAD / AVD 模型被廣泛應用於情緒辨識、人機互動與心理健康研究，跨文化研究持續驗證其適用性。"
     }
+  },
+  "wardrobe": {
+    "title": "WUZU 換裝室",
+    "backToHome": "返回首頁",
+    "tip": "下載 App 寫日記，用心點數解鎖更多裝扮！"
   },
   "contactForm": {
     "title": "聯繫我們",

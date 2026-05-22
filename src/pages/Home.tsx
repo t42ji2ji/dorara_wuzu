@@ -220,13 +220,13 @@ const Home = () => {
               App Store
             </a>
             <a
-              href="https://dorara.notion.site/30495e80ca378099810ce1f39fcba95a"
+              href="https://play.google.com/store/apps/details?id=com.dorara.wuzu1"
               target="_blank"
               rel="noopener noreferrer"
               className="glass-container flex items-center gap-3 h-14 px-8 text-base font-medium text-foreground hover:bg-white/80 dark:hover:bg-white/15 transition-colors min-w-[200px] justify-center"
             >
               <AndroidIcon className="h-5 w-5" />
-              {t('home.cta.androidBeta')}
+              {t('home.cta.androidDownload')}
             </a>
             <a
               href="https://line.me/ti/g2/Kv6bk2444cTtzrojfHZM-HCnRhOy0G669NyO-Q?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
@@ -443,6 +443,15 @@ const Home = () => {
       {/* Dress Up Section */}
       <section className="py-20 px-4 bg-white/30 dark:bg-white/5 backdrop-blur-sm">
         <WuzuDressUp />
+        <div className="text-center mt-8">
+          <Button variant="outline" size="lg" asChild className="glass-container">
+            <Link to="/wardrobe" className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4" />
+              {t('home.dressUp.viewAll')}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
       </section>
 
       {/* CTA Section */}
@@ -474,13 +483,13 @@ const Home = () => {
               </Button>
               <Button variant="outline" size="lg" asChild className="glass-container min-w-[180px]">
                 <a
-                  href="https://dorara.notion.site/30495e80ca378099810ce1f39fcba95a"
+                  href="https://play.google.com/store/apps/details?id=com.dorara.wuzu1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2"
                 >
                   <Smartphone className="h-4 w-4" />
-                  {t('home.cta.androidBeta')}
+                  {t('home.cta.androidDownload')}
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild className="glass-container min-w-[180px]">
@@ -576,6 +585,9 @@ const Home = () => {
             </Button>
             <Button variant="ghost" size="sm" asChild>
               <Link to="/privacy">{t('privacy.title')}</Link>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/wardrobe">{t('wardrobe.title')}</Link>
             </Button>
           </div>
         </div>

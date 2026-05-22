@@ -92,14 +92,15 @@
         "purple": "Purple",
         "pink": "Pink"
       },
-      "tip": "Download the App and earn heart points by journaling to unlock these outfits!"
+      "tip": "Download the App and earn heart points by journaling to unlock these outfits!",
+      "viewAll": "Try All Outfits"
     },
     "cta": {
       "title": "Start Your Journal",
       "description": "A companion is listening. Just focus on what you want to say.",
       "madeBy": "Made with love by",
       "withLove": "",
-      "androidBeta": "Android Early Access",
+      "androidDownload": "Google Play",
       "joinLine": "Join LINE Community"
     },
     "contact": {
@@ -264,6 +265,11 @@
       "citation": "Mehrabian, A., & Russell, J. A. (1974). An approach to environmental psychology. MIT Press.",
       "note": "The PAD / AVD model is widely used in emotion recognition, human-computer interaction, and mental health research, with cross-cultural studies validating its applicability."
     }
+  },
+  "wardrobe": {
+    "title": "WUZU Wardrobe",
+    "backToHome": "Back to Home",
+    "tip": "Download the App and earn heart points by journaling to unlock these outfits!"
   },
   "contactForm": {
     "title": "Contact Us",
